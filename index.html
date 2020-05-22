@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Assignment 5-05 </title>
+    <meta charset="utf-8">
+    <meta name="description" content="My webpage">
+    <meta name="keywords" content="museum">
+    <meta name="author" content="Matthias Bo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+    <h1>What should you be doing?</h1>
+    <p1>This webpage will tell you whether you should be in school right now, or at work. Please insert your age and the day into the correct boxes.</p1>
+    <br>
+    <br>
+    <p><i>Please enter your age here:</p></i>
+    <input type="text" id="agetyped">
+    <br>
+    <br>
+    <p><i>Please enter the day here:</i></p>
+    <input type="text" id="daytyped">
+    <br>
+    <br>
+    <button id="determine">Submit</button>
+    <script>
+    document.getElementById("determine").addEventListener("click", myfunction);
+    function myfunction() {
+    let age;
+    let day;
+    age = document.getElementById("agetyped").value;
+    day = document.getElementById("daytyped").value;
+    
+    if (day == "Saturday" || day == "Sunday") {
+    alert ("Time to relax for the weekend!");
+}
+    else if (age < 18 && age > 3) {
+        alert ("Time to go to school!");
+}
+    else if (age > 18 && age < 65) {
+        alert ("Time to go to work!");
+}
+    else {
+        alert ("You're either too old or too young to be doing anything really. Take a break and get some rest :)")
+    }
+}
+    </script>
+    </body>
+</html>
